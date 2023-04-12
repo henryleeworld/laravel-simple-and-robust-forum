@@ -1,4 +1,4 @@
-# Laravel 8 簡單且強大的論壇
+# Laravel 10 簡單且強大的論壇
 
 引入 riari 的 laravel-forum 套件來擴增簡單且強大的論壇，可以作為建構論壇的堅實基礎，而不會過於自以為是，對應用程式做出盡可能少的假設，同時讓更主觀的特性和功能可以自我實現。
 
@@ -20,9 +20,13 @@ $ php artisan key:generate
 ```sh
 $ php artisan migrate --seed
 ```
-- 執行安裝 Laravel Mix 引用的依賴項目，並執行所有 Mix 任務。
+- 執行安裝 Vite 和 Laravel 擴充套件引用的依賴項目。
 ```sh
-$ npm install && npm run dev
+$ npm install
+```
+- 執行正式環境版本化資源管道並編譯。
+```sh
+$ npm run build
 ```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
 - 你可以經由 `/register` 來進行註冊。
@@ -31,8 +35,8 @@ $ npm install && npm run dev
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/Lc0lLX6.png)
+![](https://i.imgur.com/4yvgW1F.png)
 > 依據最近的主題了解新的討論趨勢
 
-![](https://i.imgur.com/bRxqmZM.png)
+![](https://i.imgur.com/n3Hluz3.png)
 > 建立及管理討論和問題的類別

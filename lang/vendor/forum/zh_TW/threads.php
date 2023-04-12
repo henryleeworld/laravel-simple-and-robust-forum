@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'actions' => '帖子操作',
+    'created' => '帖子已新增',
+    'delete' => '刪除此帖子',
+    'deleted' => '帖子已刪除|帖子已刪除',
+    'lock' => '鎖定',
+    'locked' => '已鎖定',
+    'marked_read' => '所有帖子都已標記為已讀',
+    'new_thread' => '發帖',
+    'newest' => '最新帖子',
+    'none_found' => '未發現帖子',
+    'perma_delete' => '永久刪除帖子|永久刪除帖子',
+    'perma_deleted' => '帖子被永久刪除|帖子被永久刪除',
+    'pin' => '固定',
+    'pinned' => '已固定',
+    'post_the_first' => '發布第一則！',
+    'recent' => '最新帖子',
+    'restored' => '帖子已還原|帖子已還原',
+    'select_all' => '選擇全部帖子',
+    'thread' => '帖子|帖子',
+    'updated' => '帖子已更新|帖子已更新',
+    'unlock' => '解鎖',
+    'unpin' => '解除固定',
+    'unread_updated' => '未讀和已更新帖子',
+    'view' => '瀏覽帖子',
+];

@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>
-        @if (isset($thread))
-            {{ $thread->title }} -
+        @if (isset($thread_title))
+            {{ $thread_title }} —
         @endif
         @if (isset($category))
-            {{ $category->title }} -
+            {{ $category->title }} —
         @endif
         {{ trans('forum::general.home_title') }}
     </title>
@@ -287,7 +287,7 @@
         {
             event.preventDefault();
 
-            openModal(findModal(event.target.dataset.openModal));
+            openModal(findModal(event.currentTarget.dataset.openModal));
         });
     });
 
@@ -295,22 +295,21 @@
     {
         modal.addEventListener('click', event =>
         {
-            if (event.target.hasAttribute('data-close-modal'))
+            if (! event.target.hasAttribute('data-close-modal')) return;
+
+            modal.classList.remove('show');
+            mask.classList.remove('show');
+            setTimeout(function()
             {
-                modal.classList.remove('show');
-                mask.classList.remove('show');
-                setTimeout(function()
-                {
-                    modal.style.display = 'none';
-                    mask.style.display = 'none';
-                }, 200);
-            }
+                modal.style.display = 'none';
+                mask.style.display = 'none';
+            }, 200);
         });
     });
 
     document.querySelectorAll('[data-dismiss]').forEach(item =>
     {
-        item.addEventListener('click', event => event.target.parentElement.style.display = 'none');
+        item.addEventListener('click', event => event.currentTarget.parentElement.style.display = 'none');
     });
 
     document.addEventListener('DOMContentLoaded', event =>
