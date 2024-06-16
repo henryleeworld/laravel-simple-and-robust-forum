@@ -7,7 +7,6 @@ use Database\Factories\PostFactory;
 use Database\Factories\ThreadFactory;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use TeamTeaTime\Forum\Models\Category;
 
@@ -22,7 +21,7 @@ class ForumSeeder extends Seeder
         $userId = DB::table((new $userModel)->getTable())->insertGetId([
             'name' => Str::random(10),
             'email' => Str::random(10).'@gmail.com',
-            'password' => Hash::make('secret'),
+            'password' => 'secret',
         ]);
 
         $firstCategory = $this->createPopulatedCategory($userId);
