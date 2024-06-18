@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     'actions' => '贴子操作',
     'created' => '贴子已创建',
     'delete' => '删除此贴子',
@@ -26,5 +25,4 @@ return [
     'unpin' => '解除固定',
     'unread_updated' => '未读&已更新贴子',
     'view' => '查看贴子',
-
 ];

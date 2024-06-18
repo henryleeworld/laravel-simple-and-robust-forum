@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     'actions' => '操作|操作',
     'author' => '作者',
     'cancel' => '取消',
@@ -44,5 +43,4 @@ return [
     'updated' => '已更新',
     'weight' => '权重',
     'with_selection' => '已选内容…',
-
 ];

@@ -5,14 +5,22 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use TeamTeaTime\Forum\Models\Thread;
 
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Thread>
+ */
 class ThreadFactory extends Factory
 {
     protected $model = Thread::class;
 
-    public function definition()
+    /**
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
+     */
+    public function definition(): array
     {
         return [
-            'title' => $this->faker->name,
+            'title' => fake()->name,
             'category_id' => CategoryFactory::new(),
             'locked' => 0,
             'pinned' => 0,

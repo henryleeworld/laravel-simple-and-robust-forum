@@ -1,4 +1,4 @@
-# Laravel 10 簡單且強大的論壇
+# Laravel 11 簡單且強大的論壇
 
 引入 riari 的 laravel-forum 套件來擴增簡單且強大的論壇，可以作為建構論壇的堅實基礎，而不會過於自以為是，對應用程式做出盡可能少的假設，同時讓更主觀的特性和功能可以自我實現。
 
@@ -35,8 +35,8 @@ $ npm run build
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/4yvgW1F.png)
+![](https://i.imgur.com/6lluKvU.png)
 > 依據最近的主題了解新的討論趨勢
 
-![](https://i.imgur.com/n3Hluz3.png)
+![](https://i.imgur.com/1EC42EU.png)
 > 建立及管理討論和問題的類別

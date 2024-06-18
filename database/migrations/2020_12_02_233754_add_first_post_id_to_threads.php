@@ -4,29 +4,25 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddFirstPostIdToThreads extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::table('forum_threads', function (Blueprint $table) {
-            $table->integer('first_post_id')->after('locked')->unsigned()->nullable();
+            $table->unsignedBigInteger('first_post_id')->nullable()->after('locked');
         });
     }
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::table('forum_threads', function (Blueprint $table) {
             $table->dropColumn('first_post_id');
         });
     }
-}
+};

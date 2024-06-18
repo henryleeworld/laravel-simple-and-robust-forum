@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     'actions' => '回贴操作',
     'created' => '回贴已创建',
     'delete' => '删除回贴|删除回贴',
@@ -16,5 +15,4 @@ return [
     'updated' => '回贴已更新|回贴已更新',
     'view' => '查看回贴',
     'your_post' => '你的回贴',
-
 ];
