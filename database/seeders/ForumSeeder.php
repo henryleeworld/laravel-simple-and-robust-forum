@@ -16,7 +16,10 @@ class ForumSeeder extends Seeder
     const THREAD_COUNT = 2;
     const POSTS_PER_THREAD = 5;
 
-    public function run()
+    /**
+     * Run the database seeders.
+     */
+    public function run(): void
     {
         $userModel = config('forum.integration.user_model');
         $userId = DB::table((new $userModel)->getTable())->insertGetId([

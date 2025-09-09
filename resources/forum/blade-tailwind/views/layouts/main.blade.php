@@ -86,6 +86,7 @@
     </div>
 
     @yield('footer')
+
     <script>
         window.defaultCategoryColor = '{{ config('forum.frontend.default_category_color') }}';
     </script>
