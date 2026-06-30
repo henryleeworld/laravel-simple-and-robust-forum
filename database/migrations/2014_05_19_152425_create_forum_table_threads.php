@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
@@ -12,8 +13,7 @@ return new class extends Migration
     {
         Schema::create('forum_threads', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('parent_category');
-            $table->foreign('parent_category')->references('id')->on('forum_categories');
+            $table->integer('parent_category')->unsigned();
             $table->foreignIdFor(config('forum.integration.user_model'), 'author_id');
             $table->string('title');
             $table->boolean('pinned');

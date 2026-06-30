@@ -1,4 +1,4 @@
-# Laravel 12 簡單且強大的論壇
+# Laravel 13 簡單且強大的論壇
 
 引入 riari 的 laravel-forum 套件來擴增簡單且強大的論壇，可以作為建構論壇的堅實基礎，而不會過於自以為是，對應用程式做出盡可能少的假設，同時讓更主觀的特性和功能可以自我實現。
 
@@ -16,9 +16,13 @@ $ composer install
 ```sh
 $ php artisan key:generate
 ```
-- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移，並執行資料庫填充（如果要測試的話）。
+- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移。
 ```sh
-$ php artisan migrate --seed
+$ php artisan migrate
+```
+- 執行 __Artisan__ 指令的 __forum:seed__ 來執行資料庫填充（如果要測試的話）。
+```sh
+$ php artisan forum:seed
 ```
 - 執行安裝 Vite 和 Laravel 擴充套件引用的依賴項目。
 ```sh
@@ -35,8 +39,8 @@ $ npm run build
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/w56AnBA.png)
+![](https://i.imgur.com/gIDNEGS.png)
 > 依據最近的主題了解新的討論趨勢
 
-![](https://i.imgur.com/CFW7N2D.png)
+![](https://i.imgur.com/LQY6JXC.png)
 > 建立及管理討論和問題的類別

@@ -6,20 +6,19 @@
     "keywords": ["laravel", "framework"],
     "license": "MIT",
     "require": {
-        "php": "^8.2",
-        "laravel/framework": "^12.0",
-        "laravel/tinker": "^2.10.1",
-        "riari/laravel-forum": "^7.0"
+        "php": "^8.3",
+        "laravel/framework": "^13.0",
+        "laravel/tinker": "^3.0",
+        "riari/laravel-forum": "^8.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
-        "laravel/breeze": "^2.3",
-        "laravel/pail": "^1.2.2",
-        "laravel/pint": "^1.21",
-        "laravel/sail": "^1.41",
+        "laravel/breeze": "^2.4",
+        "laravel/pail": "^1.2.5",
+        "laravel/pint": "^1.27",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.6",
-        "phpunit/phpunit": "^11.5.17"
+        "phpunit/phpunit": "^12.5.12"
     },
     "autoload": {
         "psr-4": {
@@ -83,6 +82,6 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true
 }

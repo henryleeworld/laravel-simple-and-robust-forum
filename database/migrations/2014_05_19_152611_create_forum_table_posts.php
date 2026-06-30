@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
@@ -12,8 +13,7 @@ return new class extends Migration
     {
         Schema::create('forum_posts', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('parent_thread');
-            $table->foreign('parent_thread')->references('id')->on('forum_threads');
+            $table->integer('parent_thread')->unsigned();
             $table->foreignIdFor(config('forum.integration.user_model'), 'author_id');
             $table->text('content');
 

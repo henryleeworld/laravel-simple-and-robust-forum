@@ -1,8 +1,10 @@
 <?php
 
 return [
-
     'actions' => 'Action|Actions',
+    'approve_selection' => 'Approve selection',
+    'approve' => 'Approve',
+    'approved' => 'Approved',
     'author' => 'Author',
     'cancel' => 'Cancel',
     'changes_applied' => 'Changes applied',
@@ -12,6 +14,7 @@ return [
     'color_dark_mode' => 'Color (dark mode)',
     'confirm_action' => 'Confirm action',
     'generic_confirm' => 'Are you sure?',
+    'delete_selection' => 'Delete selection',
     'delete' => 'Delete',
     'deleted' => 'Deleted',
     'description' => 'Description',
@@ -28,6 +31,7 @@ return [
     'new' => 'New',
     'new_reply' => 'New reply',
     'none' => 'None',
+    'pending_approval' => 'Pending Approval',
     'perma_delete' => 'Permanently delete',
     'permalink' => 'Permalink',
     'posted' => 'Posted',
@@ -44,9 +48,9 @@ return [
     'save' => 'Save',
     'subject' => 'Subject',
     'title' => 'Title',
+    'unapprove' => 'Unapprove',
     'unread' => 'Unread',
     'updated' => 'Updated',
     'weight' => 'Weight',
     'with_selection' => 'With selection…',
-
 ];

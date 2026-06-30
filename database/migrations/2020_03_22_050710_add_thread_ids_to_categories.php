@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('forum_categories', function (Blueprint $table) {
-            $table->unsignedBigInteger('newest_thread_id')->nullable()->after('accepts_threads');
-            $table->unsignedBigInteger('latest_active_thread_id')->nullable()->after('newest_thread_id');
+            $table->integer('newest_thread_id')->after('accepts_threads')->unsigned()->nullable();
+            $table->integer('latest_active_thread_id')->after('newest_thread_id')->unsigned()->nullable();
         });
     }
 

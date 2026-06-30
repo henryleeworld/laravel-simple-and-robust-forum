@@ -24,7 +24,7 @@ return new class extends Migration
     {
         Schema::table('forum_categories', function (Blueprint $table) {
             $table->dropNestedSet();
-            $table->unsignedBigInteger('category_id');
+            $table->integer('category_id')->unsigned();
             $table->integer('weight');
         });
     }

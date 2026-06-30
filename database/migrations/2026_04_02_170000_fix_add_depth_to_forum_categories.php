@@ -1,8 +1,10 @@
 <?php
 
+use Aimeos\Nestedset\NestedSet;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use TeamTeaTime\Forum\Models\Category;
 
 return new class extends Migration
 {
@@ -11,11 +13,15 @@ return new class extends Migration
      */
     public function up(): void
     {
+        if (Schema::hasColumn('forum_categories', 'depth')) {
+            return;
+        }
+
         Schema::table('forum_categories', function (Blueprint $table) {
-            // Add increments to the thread and post counts on the categories table
-            $table->integer('post_count')->after('enable_threads')->default(0);
-            $table->integer('thread_count')->after('enable_threads')->default(0);
+            NestedSet::columnsDepth($table);
         });
+
+        Category::fixTree();
     }
 
     /**
@@ -24,7 +30,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('forum_categories', function (Blueprint $table) {
-            $table->dropColumn(['thread_count', 'post_count']);
+            NestedSet::dropColumnsDepth($table);
         });
     }
 };

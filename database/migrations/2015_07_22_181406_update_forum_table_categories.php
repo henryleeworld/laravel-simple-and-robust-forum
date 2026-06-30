@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
@@ -16,7 +17,7 @@ return new class extends Migration
         });
 
         Schema::table('forum_categories', function (Blueprint $table) {
-            $table->unsignedBigInteger('category_id')->default(0)->change();
+            $table->integer('category_id')->default(0)->change();
             $table->string('description')->nullable()->change();
             $table->integer('weight')->default(0)->change();
 

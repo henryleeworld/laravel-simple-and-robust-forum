@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
@@ -11,8 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('forum_threads_read', function (Blueprint $table) {
-            $table->unsignedBigInteger('thread_id');
-            $table->foreign('thread_id')->references('id')->on('forum_threads');
+            $table->integer('thread_id')->unsigned();
             $table->foreignIdFor(config('forum.integration.user_model'), 'user_id');
             $table->timestamps();
         });

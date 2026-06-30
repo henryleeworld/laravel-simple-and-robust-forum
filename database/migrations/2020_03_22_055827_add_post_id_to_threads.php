@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('forum_threads', function (Blueprint $table) {
-            $table->unsignedBigInteger('last_post_id')->nullable()->after('locked');
+            $table->integer('last_post_id')->after('locked')->unsigned()->nullable();
         });
     }
 
